@@ -1,13 +1,4 @@
 'use client';
-function __insertCSS(code) {
-  if (!code || typeof document == 'undefined') return
-  let head = document.head || document.getElementsByTagName('head')[0]
-  let style = document.createElement('style')
-  style.type = 'text/css'
-  head.appendChild(style)
-  ;style.styleSheet ? (style.styleSheet.cssText = code) : style.appendChild(document.createTextNode(code))
-}
-
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var DialogPrimitive = require('@radix-ui/react-dialog');

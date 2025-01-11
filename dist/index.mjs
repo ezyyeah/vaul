@@ -1,13 +1,4 @@
 'use client';
-function __insertCSS(code) {
-  if (!code || typeof document == 'undefined') return
-  let head = document.head || document.getElementsByTagName('head')[0]
-  let style = document.createElement('style')
-  style.type = 'text/css'
-  head.appendChild(style)
-  ;style.styleSheet ? (style.styleSheet.cssText = code) : style.appendChild(document.createTextNode(code))
-}
-
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import * as React from 'react';
 import React__default, { useLayoutEffect, useEffect, useMemo } from 'react';

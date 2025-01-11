@@ -3,7 +3,6 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import React, { useEffect } from 'react';
 import { DrawerContext, useDrawerContext } from './context';
-import './style.css';
 import { usePreventScroll, isInput } from './use-prevent-scroll';
 import { useComposedRefs } from './use-composed-refs';
 import { useSnapPoints } from './use-snap-points';
