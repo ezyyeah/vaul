@@ -1,7 +1,7 @@
 'use client';
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DrawerContext, useDrawerContext } from './context';
 import './style.css';
 import { usePreventScroll, isInput } from './use-prevent-scroll';
@@ -1102,21 +1102,19 @@ export function NestedRoot({ onDrag, onOpenChange, open: nestedIsOpen, ...rest }
     throw new Error('Drawer.NestedRoot must be placed in another drawer');
   }
 
+  useEffect(() => {
+    onNestedOpenChange(nestedIsOpen ?? false);
+  }, [nestedIsOpen]);
+
   return (
     <Root
       nested
       open={nestedIsOpen}
-      onClose={() => {
-        onNestedOpenChange(false);
-      }}
       onDrag={(e, p) => {
         onNestedDrag(e, p);
         onDrag?.(e, p);
       }}
       onOpenChange={(o) => {
-        if (o) {
-          onNestedOpenChange(o);
-        }
         onOpenChange?.(o);
       }}
       onRelease={onNestedRelease}
