@@ -1659,13 +1659,13 @@ function Portal(props) {
     });
 }
 const Drawer = {
-    Root,
-    NestedRoot,
-    Content,
-    Overlay,
+    Root: Root,
+    NestedRoot: NestedRoot,
+    Content: Content,
+    Overlay: Overlay,
     Trigger: DialogPrimitive__namespace.Trigger,
-    Portal,
-    Handle,
+    Portal: Portal,
+    Handle: Handle,
     Close: DialogPrimitive__namespace.Close,
     Title: DialogPrimitive__namespace.Title,
     Description: DialogPrimitive__namespace.Description

@@ -124,12 +124,12 @@ declare function NestedRoot({ onDrag, onOpenChange, open: nestedIsOpen, ...rest 
 type PortalProps = React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>;
 declare function Portal(props: PortalProps): React.JSX.Element;
 declare const Drawer: {
-    Root: typeof Root;
-    NestedRoot: typeof NestedRoot;
-    Content: React.ForwardRefExoticComponent<Omit<DialogPrimitive.DialogContentProps & React.RefAttributes<HTMLDivElement>, "ref"> & React.RefAttributes<HTMLDivElement>>;
-    Overlay: React.ForwardRefExoticComponent<Omit<DialogPrimitive.DialogOverlayProps & React.RefAttributes<HTMLDivElement>, "ref"> & React.RefAttributes<HTMLDivElement>>;
+    Root: React.FC<DialogPrimitive.DialogProps>;
+    NestedRoot: React.FC<DialogPrimitive.DialogProps>;
+    Content: React.ForwardRefExoticComponent<DialogPrimitive.DialogContentProps & React.RefAttributes<HTMLDivElement>>;
+    Overlay: React.ForwardRefExoticComponent<DialogPrimitive.DialogOverlayProps & React.RefAttributes<HTMLDivElement>>;
     Trigger: React.ForwardRefExoticComponent<DialogPrimitive.DialogTriggerProps & React.RefAttributes<HTMLButtonElement>>;
-    Portal: typeof Portal;
+    Portal: React.FC<DialogPrimitive.DialogPortalProps>;
     Handle: React.ForwardRefExoticComponent<Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & {
         preventCycle?: boolean | undefined;
     } & React.RefAttributes<HTMLDivElement>>;
