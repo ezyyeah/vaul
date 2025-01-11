@@ -21,7 +21,7 @@
         "default": "./dist/index.js"
       }
     },
-    "./style.css": "./style.css"
+    "./style.css": "./src/style.css"
   },
   "sideEffects": false,
   "scripts": {
